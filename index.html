@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SKYCARRENT</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="images/logo.png" alt="SKYCARRENT Logo" class="logo" />
+        <span class="brand-name">SKYCARRENT</span>
+      </a>
+      <nav class="main-nav">
+        <a href="index.html">Start</a>
+        <a href="ueber-uns.html">Über uns</a>
+        <a href="fahrzeuge.html">Fahrzeuge</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="agb.html">AGB</a>
+        <a href="datenschutz.html">Datenschutz</a>
+        <a href="impressum.html">Impressum</a>
+      </nav>
+    </div>
+  </header>
+  <main class="page-content">
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="hero-copy">
+      <h1>Freiheit auf vier Rädern</h1>
+      <p>Modern. Seriös. Flexibel. Ihre Autovermietung in Bremen.</p>
+      <div class="hero-actions">
+        <a class="btn" href="fahrzeuge.html">Fahrzeuge ansehen</a>
+        <a class="btn-outline" href="kontakt.html">Kontakt aufnehmen</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <picture>
+    <source srcset="images/hero.webp" type="image/webp">
+    <picture>
+  <source srcset="images/hero.webp" type="image/webp">
+  <img src="images/hero.jpg" alt="Fahrzeug" />
+</picture>
+  </picture>
+    </div>
+  </div>
+</section>
+
+
+  <section class="categories">
+    <div class="container">
+      <h2>Kategorien</h2>
+      <div class="grid-3">
+        <a class="card" href="fahrzeuge.html#normale-fahrzeuge">
+          <img src="images/klassisch1.jpg" alt="Normale Fahrzeuge">
+          <h3>Normale Fahrzeuge</h3>
+        </a>
+        <a class="card" href="fahrzeuge.html#sportliche-fahrzeuge">
+          <img src="images/sportlich1.jpg" alt="Sportliche Fahrzeuge">
+          <h3>Sportliche Fahrzeuge</h3>
+        </a>
+        <a class="card" href="fahrzeuge.html#transporter">
+          <img src="images/transporter1.jpg" alt="Transporter">
+          <h3>Transporter</h3>
+        </a>
+      </div>
+    </div>
+  </section>
+
+<section class="cta">
+  <div class="container cta-inner">
+    <h2>Jetzt unverbindlich anfragen</h2>
+    <p>Per WhatsApp oder Kontaktformular – wir melden uns schnell zurück.</p>
+    <a class="btn" href="https://wa.me/491731828752" target="_blank" rel="noopener">Per WhatsApp anfragen</a>
+  </div>
+</section>
+
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-columns">
+        <div>
+          <strong>SKYCARRENT</strong><br/>
+          Hinterm Sielhof 4/5, 28277 Bremen<br/>
+          Tel: <a href="tel:+491731828752">+49 173 1828752</a><br/>
+          E-Mail: <a href="mailto:info@skycar-rent.de">info@skycar-rent.de</a>
+        </div>
+        <div class="footer-links">
+          <a href="agb.html">AGB</a>
+          <a href="datenschutz.html">Datenschutz</a>
+          <a href="impressum.html">Impressum</a>
+        </div>
+      </div>
+      <p class="copy">&copy; 2025 SKYCARRENT – Alle Rechte vorbehalten.</p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a class="wa-button" href="https://wa.me/491731828752" target="_blank" rel="noopener" aria-label="WhatsApp"><img src="images/whatsapp.png" alt="WhatsApp" style="width:24px;height:24px;margin-right:8px;vertical-align:middle;"><span>Wunschfahrzeug anfragen</span></a>
+
+  <!-- Consent Banner -->
+  <div id="consent-banner" class="consent hidden" role="dialog" aria-live="polite">
+    <div class="consent-content">
+      <p>Mit der Nutzung dieser Website akzeptieren Sie unsere <a href="agb.html">AGB</a> und <a href="datenschutz.html">Datenschutzbestimmungen</a>.</p>
+      <button id="consent-accept">Zustimmen</button>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+
+  <div id="consent-banner" style="position:fixed;bottom:0;left:0;right:0;background:#f9f9f9;border-top:1px solid #ddd;padding:15px;display:flex;justify-content:space-between;align-items:center;z-index:1000;font-size:14px;">
+    <span>Wir verwenden Cookies sowie AGB &amp; Datenschutzerklärung. Mit Klick auf „Akzeptieren“ stimmen Sie zu.</span>
+    <div>
+      <a href="datenschutz.html" style="margin-right:10px;color:#333;text-decoration:underline;">Mehr erfahren</a>
+      <button id="consent-accept" style="background:#25D366;color:#fff;border:none;padding:8px 16px;border-radius:5px;cursor:pointer;">Akzeptieren</button>
+    </div>
+  </div>
+  <script>
+    (function() {
+      if (localStorage.getItem('consentAccepted')) {
+        document.getElementById('consent-banner').style.display = 'none';
+      }
+      document.getElementById('consent-accept').addEventListener('click', function() {
+        localStorage.setItem('consentAccepted', 'true');
+        document.getElementById('consent-banner').style.display = 'none';
+      });
+    })();
+  </script>
+</body>
+
+</html>
